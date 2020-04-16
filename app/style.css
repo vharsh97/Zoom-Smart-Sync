@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 70px;
+}
+
+.folderstr {
+  text-align: center;
+  position: fixed;
+  top: 10%;
+  left: 30%;
+}
+  
+.content {
+  align-items: stretch;
+  height: 50vh;
+  display: flex;
+  border: 5px solid rgb(252, 238, 241);;
+}
+
+.content p {
+  text-align: center;
+}
+
+.content.drag-over {
+  border-color: rgb(75, 160, 151);
+}
+
+/* Back button */
+.button {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* floating back button */
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:65px;
+	left:15px;
+	background-color:blue;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.floatt{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:65px;
+  right:15px;
+  color:blue;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:5px;
+}
+
+.wrapper {
+  margin-top: 10pt;
+  text-align: center;
+}
+
+.topnav {
+  z-index: 2;
+  background-color: #333;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  position: fixed;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav p {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  margin-right: 15pt;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#firmname {
+  margin-left: 5px;
+}
+
+
+/* switch button */
+.switch {
+  top: 5pt;
+  right: 5pt;
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2196F3;
+  color: white;
+  text-align: center;
+}
+
+/* file system*/
+
+#main-area {
+  z-index: 1;
+  clear: both;
+  margin: 2em;
+  margin-top: 3em;
+}
+
+.item {
+     position: relative;
+     float: left;
+     padding: 1em;
+     margin: 1em;
+     width: 6em;
+     height: 6em;
+     text-align: center;
+}
+
+.item .filename {
+     padding-top: 1em;
+     font-size: 10pt;
+}
+
+#search {
+     padding: 0.5em;
+     min-width: 10em;
+     border-radius: 3em;
+     margin: 2em 1em;
+     border: none;
+     outline: none;
+}
+
+span.path:hover, img:hover {
+     opacity: 0.7;
+     cursor: pointer;
+}
+
+/* context menu */
+.menu {
+  width: 150px;
+  box-shadow: 3px 3px 5px #888888;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  position: fixed;
+  display: none;
+}
+  
+.menu-item
+{
+  height: 20px;
+}
+
+.menu-item:hover
+{
+  background-color: #6CB5FF;
+  cursor: pointer;
+}
